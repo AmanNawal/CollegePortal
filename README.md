@@ -51,8 +51,8 @@ This application has a simple yet interactive interface so that the students cou
     <th>Student Signup mode</th>
   </tr>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/74124514/148682661-3df04f47-7508-4553-88c1-469129af2205.jpeg" alt="Splash Screen" style="width:250px;height:500px;"></td>
-    <td><img src="https://user-images.githubusercontent.com/74124514/148585702-3ce64e9e-e10d-4981-a899-e2c067515748.jpeg" alt="Usermode" style="width:250px;height:500px;"></td>
+    <td><img src="https://user-images.githubusercontent.com/74124514/182534270-dcf583ed-3fa4-4792-b577-838149ec75b0.jpeg" alt="Splash Screen" style="width:250px;height:500px;"></td>
+    <td><img src="https://user-images.githubusercontent.com/74124514/182534389-dfd8b0fa-4df8-485f-95fe-0ee9d86c1340.jpeg" alt="Usermode" style="width:250px;height:500px;"></td>
     <td><img src="https://user-images.githubusercontent.com/74124514/148633927-a72cf42d-5ca1-4bae-a521-2beca3da9e86.jpeg" alt="studentsignup" style="width:250px;height:500px;"></td>
   </tr>
 
