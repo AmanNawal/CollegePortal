@@ -51,6 +51,7 @@ init {
                        intent.putExtra("Image",image)
                      //  Toast.makeText(context, "onclick2", Toast.LENGTH_SHORT).show()
                        context.startActivity(intent)
+
                    }
 
 

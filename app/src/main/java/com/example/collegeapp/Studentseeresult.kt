@@ -1,7 +1,11 @@
 package com.example.collegeapp
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
+import android.util.Log
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -12,7 +16,7 @@ import com.google.firebase.database.ktx.getValue
 
 class Studentseeresult : AppCompatActivity() {
 
-    val uniroll=unirollClass.instance.univeroll
+    //val uniroll=unirollClass.instance.univeroll
     lateinit var checked:String
     lateinit var semester:String
     lateinit var subject1: TextView
@@ -31,9 +35,8 @@ class Studentseeresult : AppCompatActivity() {
     lateinit var database: FirebaseDatabase
     lateinit var auth: FirebaseAuth
     lateinit var reference: DatabaseReference
-    
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+        override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_studentseeresult)
         checked= intent.getStringExtra("midend").toString()
@@ -56,9 +59,10 @@ class Studentseeresult : AppCompatActivity() {
         semnumber=findViewById(R.id.semester_number)
 
 
+        val purified_email=intent.getStringExtra("Email")
+        val uniroll=intent.getStringExtra("Universityrollnumber")
 
-
-
+           // Toast.makeText(applicationContext, "$purified_email  $uniroll", Toast.LENGTH_SHORT).show()
         var sem1= mutableListOf<String>("Basic Electrical Engineering","Basic Electrical Engineering Lab","Career Exellence","Computer Lab-I",
             "Engineering Mathematics-I","Engineering Physics","Fundamental of Computer & Introduction to Programming","General Proficiency",
             "Healthy Living and Fitness","Language Lab")
@@ -85,7 +89,7 @@ class Studentseeresult : AppCompatActivity() {
         semnumber.text="Semester:   "+semester
         universitynumber.text="University Roll Number:  "+uniroll
 
-        reference.child("Users").child(uniroll!!).child("result").child(semester).child(checked)
+        reference.child("Users").child(uniroll+purified_email).child("result").child(semester).child(checked)
             .addListenerForSingleValueEvent(object : ValueEventListener{
                 override fun onDataChange(snapshot: DataSnapshot) {
                     if(snapshot.exists())
@@ -196,4 +200,7 @@ class Studentseeresult : AppCompatActivity() {
 
 
     }
+
+
+
 }

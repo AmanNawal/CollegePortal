@@ -13,4 +13,8 @@
         android:id="@+id/writeresult"
         android:icon="@drawable/student_vectorasset"
         android:title="Write results" />
+    <item
+        android:id="@+id/addteachers"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="Add Teachers" />
 </menu>

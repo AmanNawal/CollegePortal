@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.collegeapp">
 
     <application
@@ -10,73 +11,71 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CollegeApp">
         <activity
+            android:name=".Content.VoteforTeacher"
+            android:exported="false" />
+        <activity
+            android:name="teachernavigationmainscreen.addAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".Content.Rankings"
+            android:exported="false" />
+        <activity
+            android:name=".Content.tutorials"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OpenImage.openimage"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".Studentseeresult"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".WritingResultTeacher"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name="teachernavigationmainscreen.techermainscreen"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name="read_announcement.reading"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".studentmainscreen.studentMainScreen"
             android:exported="false"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".StudentMainScreen"
-            android:exported="false"
-            android:label="@string/title_activity_student_main_screen" />
-        <activity
-            android:name=".StudentMainscreen"
-            android:exported="false"
-            android:label="@string/title_activity_student_mainscreen" />
-        <activity
-            android:name=".studentmainscreen.studentMainActivity"
-            android:exported="false"
-            android:label="@string/title_activity_student_main" />
-        <activity
-            android:name=".StudentMainActivity"
-            android:exported="false"
-            android:label="@string/title_activity_student_main" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".studentsignupdataActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".TeacherMainActivity"
             android:exported="false"
             android:label="@string/title_activity_teacher_main"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".TeacherMainScreen"
-            android:exported="false" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".adminSignin"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".TeacherLoginSighupMode"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".signinActivityStudent"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".studentLoginSignupmode"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".usermode"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

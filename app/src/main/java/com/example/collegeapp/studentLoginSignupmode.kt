@@ -152,7 +152,14 @@ class studentLoginSignupmode : AppCompatActivity() {
             intent.putExtra("password", password)
             intent.putExtra("studentname", studentname)
             intent.putExtra("imageuri", ProfilepicURI.toString())
-            startActivity(intent)
+            if (password.length >= 7) {
+                startActivity(intent)
+                finish()
+            }
+            else
+            {
+                Toast.makeText(applicationContext, "The password must have atleast 7 characters", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 

@@ -82,6 +82,12 @@ class Result : Fragment() {
         seeresult.setOnClickListener(object : View.OnClickListener{
             override fun onClick(v: View?) {
 
+                //*******************************************************************
+                val bundle=arguments
+                val profile_email= bundle?.getString("Email")
+                val universityrollnumber= bundle?.getString("Universityrollnumber")
+                val purified_email= profile_email?.replace(".","")
+                //******************************************************************
 
                 if(midsem.isChecked)
                 {
@@ -101,6 +107,8 @@ class Result : Fragment() {
                     val intent= Intent(context, Studentseeresult::class.java)
                     intent.putExtra("semester",semesterselected)
                     intent.putExtra("midend",checked)
+                    intent.putExtra("Universityrollnumber",universityrollnumber)
+                    intent.putExtra("Email",purified_email)
                     startActivity(intent)
                     // Toast.makeText(context, "Writing something", Toast.LENGTH_SHORT).show()
                 }

@@ -18,6 +18,7 @@ var semestersubjects= mutableListOf<MutableList<String>>()
 lateinit var submitButton:Button
 lateinit var edittextarray:MutableList<EditText>
 lateinit var universitynum:EditText
+lateinit var studentEmail:EditText
 lateinit var subject1:EditText
 lateinit var subject2:EditText
 lateinit var subject3:EditText
@@ -66,8 +67,9 @@ lateinit var semester:String
             nine=subject9.text.toString().trim()
             ten=subject10.text.toString().trim()
             val uninum=universitynum.text.toString().trim()
+            val email=studentEmail.text.toString().trim()
             if(!one.isEmpty() && !two.isEmpty() && !three.isEmpty() && !four.isEmpty() && !five.isEmpty() && !six.isEmpty() && !seven.isEmpty()
-                && !eight.isEmpty() && !nine.isEmpty() && !ten.isEmpty() &&!uninum.isEmpty())
+                && !eight.isEmpty() && !nine.isEmpty() && !ten.isEmpty() &&!uninum.isEmpty() && !email.isEmpty())
             {
                 submitButton.isEnabled=true
 
@@ -97,7 +99,7 @@ lateinit var semester:String
         setContentView(R.layout.activity_writing_result_teacher)
 
         universitynum=findViewById(R.id.university_roll_numwriting)
-
+        studentEmail=findViewById(R.id.StudentEmailAddress)
 
         subject1=findViewById(R.id.oneinresult)
         subject2=findViewById(R.id.twoinresult)
@@ -193,11 +195,12 @@ lateinit var semester:String
         subject9.addTextChangedListener(watchText)
         subject10.addTextChangedListener(watchText)
         universitynum.addTextChangedListener(watchText)
+        studentEmail.addTextChangedListener(watchText)
 
 
 
 
-        Toast.makeText(applicationContext, semester, Toast.LENGTH_SHORT).show()
+       // Toast.makeText(applicationContext, semester, Toast.LENGTH_SHORT).show()
        // Toast.makeText(applicationContext, checked, Toast.LENGTH_SHORT).show()
 
     }
@@ -245,8 +248,9 @@ lateinit var semester:String
                 whichsemester=third(one,two,three,four,five,six,seven,eight,nine,ten)
             }
         }
-
-        database.reference.child("Users").child(universitynum.text.toString()).addListenerForSingleValueEvent(object : ValueEventListener{
+        val email_student=studentEmail.text.toString()
+        val purified_email=email_student.replace(".","")
+        database.reference.child("Users").child(universitynum.text.toString()+purified_email).addListenerForSingleValueEvent(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 if(!snapshot.exists())
                 {
@@ -254,7 +258,7 @@ lateinit var semester:String
                 }
                 else
                 {
-                    database.reference.child("Users").child(universitynum.text.toString()).child("result").child(semester)
+                    database.reference.child("Users").child(universitynum.text.toString()+purified_email).child("result").child(semester)
                         .child(checked).setValue(whichsemester).addOnSuccessListener {
 
                             Toast.makeText(applicationContext, "Result Published!", Toast.LENGTH_SHORT).show()

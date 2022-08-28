@@ -13,4 +13,8 @@
         android:id="@+id/Result"
         android:icon="@drawable/write_data_teacher"
         android:title="Result" />
+    <item
+        android:id="@+id/studycontent"
+        android:icon="@drawable/book_24"
+        android:title="Content" />
 </menu>

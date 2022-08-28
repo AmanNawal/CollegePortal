@@ -37,13 +37,16 @@
                 android:textStyle="bold" />
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/readimage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="20dp"
                 android:backgroundTint="@android:color/transparent"
+                android:onClick="openImage"
                 app:cardCornerRadius="10dp"
-                app:cardElevation="3dp">
+                app:cardElevation="3dp"
+                tools:ignore="SpeakableTextPresentCheck">
 
                 <ImageView
                     android:id="@+id/imageannouncementadapter"

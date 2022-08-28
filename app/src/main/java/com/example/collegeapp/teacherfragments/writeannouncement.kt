@@ -89,11 +89,11 @@ class writeannouncement : Fragment() {
         submit.setOnClickListener(object: View.OnClickListener{
             override fun onClick(v: View?) {
 
-                if(headingtext==null)
+                if(headingtext.text.equals(""))
                 {
                     Toast.makeText(context, "Please write a heading", Toast.LENGTH_SHORT).show()
                 }
-                else if (infoparagraph==null)
+                else if (infoparagraph.text.equals(""))
                 {
                     Toast.makeText(context, "Write some information about the announcement", Toast.LENGTH_SHORT).show()
                 }
@@ -149,7 +149,7 @@ class writeannouncement : Fragment() {
                         val data = modelclass_for_Announcement(downloadeduri, heading, information)
                         database.reference.child("Announcements").push().setValue(data).addOnSuccessListener {
 
-                            //Toast.makeText(context, "data entered in realtime database", Toast.LENGTH_SHORT).show()
+                         //   Toast.makeText(context, "Announcement made successfully!", Toast.LENGTH_SHORT).show()
                         }
 
                          }
@@ -176,7 +176,7 @@ class writeannouncement : Fragment() {
 
         }
 
-        Toast.makeText(context, heading+information, Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, "Announcement made successfully!", Toast.LENGTH_SHORT).show()
 
     }
 

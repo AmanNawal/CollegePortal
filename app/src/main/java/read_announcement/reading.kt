@@ -1,14 +1,19 @@
 package read_announcement
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import com.bumptech.glide.Glide
+import com.example.collegeapp.OpenImage.openimage
 import com.example.collegeapp.R
 
 class reading : AppCompatActivity() {
+
+    lateinit var img:String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reading)
@@ -21,7 +26,7 @@ class reading : AppCompatActivity() {
         info=findViewById(R.id.informationadapter)
         heading=findViewById(R.id.Headingadapter)
 
-        val img:String
+
         val infoannouncement:String
         val headannouncement:String
 
@@ -34,5 +39,13 @@ class reading : AppCompatActivity() {
         heading.text=headannouncement
 
 
+    }
+
+
+    fun openImage(view:View)
+    {
+        val intent=Intent(applicationContext,openimage::class.java)
+        intent.putExtra("Image",img)
+        startActivity(intent)
     }
 }

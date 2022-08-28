@@ -48,10 +48,7 @@ class Announcement : Fragment() {
 
 
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val view= inflater.inflate(R.layout.fragment_announcement, container, false)
 
@@ -69,6 +66,8 @@ class Announcement : Fragment() {
                 database = FirebaseDatabase.getInstance()
                 reference = database.reference
                 list = arrayListOf()
+
+
                 progressbar = view.findViewById(R.id.spin_kit)
                 val doublebounce: Sprite = Wave()
                 progressbar.setIndeterminateDrawable(doublebounce)
@@ -104,13 +103,9 @@ class Announcement : Fragment() {
 
                             if (list.size > 0) {
                                 try {
-                                    progressbar.setVisibility(View.INVISIBLE)
+                                   progressbar.setVisibility(View.INVISIBLE)
                                     val adapter = student_announcement_adpater(list, context!!) //THIS WAS THE PLACE WHERE THE MAIN BUG ACTUALLY WAS RESIDING
-                                    recycler.layoutManager = LinearLayoutManager(
-                                        context,
-                                        LinearLayoutManager.VERTICAL,
-                                        false
-                                    )
+                                    recycler.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
                                     recycler.adapter = adapter
                                 }
                             catch (ex:NullPointerException)   //TO CATCH THAT BUG
