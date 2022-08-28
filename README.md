@@ -48,7 +48,6 @@ This application has a simple yet interactive interface so that the students cou
   <tr>
     <th>Starting Splash Screen</th>
     <th>User Mode</th>
-    <th>Student Signup mode</th>
   </tr>
   <tr>
     <td><img src="https://user-images.githubusercontent.com/74124514/182534270-dcf583ed-3fa4-4792-b577-838149ec75b0.jpeg" alt="Splash Screen" style="width:250px;height:500px;"></td>
