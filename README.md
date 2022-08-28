@@ -53,7 +53,6 @@ This application has a simple yet interactive interface so that the students cou
   <tr>
     <td><img src="https://user-images.githubusercontent.com/74124514/182534270-dcf583ed-3fa4-4792-b577-838149ec75b0.jpeg" alt="Splash Screen" style="width:250px;height:500px;"></td>
     <td><img src="https://user-images.githubusercontent.com/74124514/182534389-dfd8b0fa-4df8-485f-95fe-0ee9d86c1340.jpeg" alt="Usermode" style="width:250px;height:500px;"></td>
-    <td><img src="https://user-images.githubusercontent.com/74124514/148633927-a72cf42d-5ca1-4bae-a521-2beca3da9e86.jpeg" alt="studentsignup" style="width:250px;height:500px;"></td>
   </tr>
 
 </table><br><br>
