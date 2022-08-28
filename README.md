@@ -59,25 +59,6 @@ This application has a simple yet interactive interface so that the students cou
 ##  Student Mode:
 
 
-
-
-
-
-
-  <table align="center">
-  <tr>
-    <th>Sign In</th>
-    <th>Sign In 2</th>
-    <th>Student Profile Picture upload</th>
-  </tr>
-  <tr>
-    <td><img src="https://user-images.githubusercontent.com/74124514/148633991-1bcd5b59-10c1-412e-984c-f115de6c007f.jpeg" alt="News Display" style="width:250px;height:500px;"></td>
-    <td><img src="https://user-images.githubusercontent.com/74124514/148633994-8452a4c7-b95e-4d10-b342-80ec96149d08.jpeg" alt="Saved News" style="width:250px;height:500px;"></td>
-    <td><img src="https://user-images.githubusercontent.com/74124514/148634115-8c476ef0-2e12-4128-81ca-9226738a9a58.jpeg" alt="Image - news sharing" style="width:250px;height:500px;"></td>
-  </tr>
-
-</table><br><br>
-
    <table align="center">
   <tr>
     <th>Student Mode Announcement Screen</th>
