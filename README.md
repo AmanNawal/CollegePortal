@@ -94,9 +94,8 @@ This application has a simple yet interactive interface so that the students cou
 
   <table align="center">
   <tr>
-
-    <th>Announcements(Admin Mode) </th>
-    
+    <th>
+     Announcements(Admin Mode) </th>
   </tr>
   <tr>
     <td><img src="https://user-images.githubusercontent.com/74124514/148588368-0c084e00-14d6-42f5-8fc4-d83325625004.jpeg" alt="Usermode" style="width:250px;height:500px;"></td>
