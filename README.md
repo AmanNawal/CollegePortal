@@ -94,14 +94,12 @@ This application has a simple yet interactive interface so that the students cou
 
   <table align="center">
   <tr>
-    <th>Admin Mode authentication</th>
+
     <th>Announcements(Admin Mode) </th>
-    <th>Make Announcement(Admin Mode)</th>
+    
   </tr>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/74124514/148634145-a10ecbb8-79db-45db-bce8-c3e4bf161cec.jpeg" alt="Splash Screen" style="width:250px;height:500px;"></td>
     <td><img src="https://user-images.githubusercontent.com/74124514/148588368-0c084e00-14d6-42f5-8fc4-d83325625004.jpeg" alt="Usermode" style="width:250px;height:500px;"></td>
-    <td><img src="https://user-images.githubusercontent.com/74124514/148634150-d6b720ab-37a5-4cc6-b919-d91ad4a4ce6c.jpeg" alt="studentsignup" style="width:250px;height:500px;"></td>
   </tr>
 
 </table><br><br>
